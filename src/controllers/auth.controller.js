@@ -76,7 +76,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
   await user.update({
     password: encryptedPassword,
-    passwordchangedat: Date.now(),
+    passwordChangedAt: Date.now(),
   });
 
   return res.status(200).json({
